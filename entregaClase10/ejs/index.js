@@ -14,7 +14,7 @@ app.set("views","./views")
 //pagian de entrada
 //obtener productos
 app.get("/",(req,res)=>{
-    res.render("portada",{titulo:"Que me vaya bien"})
+    res.render("./partials/portada",{titulo:"QUE ME VAYA BIEN"})
 })
 
 

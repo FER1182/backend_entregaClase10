@@ -11,23 +11,29 @@
 </head>
 
 <body>
+    <header>
+        <%- include('partials/portada',{titulo:"Que me vaya bien"}); %>
+    </header>
     <div class="container">
-         <h1>FORMULARIO</h1>   
+         <h1 style="text-transform: lowercase;">FORMULARIO PARA AGREGAR PRODUCTOS A LA PAGINA</h1>   
         <form action="./productos", method="post">
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Name</label>
                 <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Price</label>
+                <label for="exa" class="form-label">Price</label>
                 <input type="text" class="form-control" name="price" id="exampleInputPassword1">
             </div>
-
+            <div class="mb-3">
+                <label for="exa" class="form-label">Url photo</label>
+                <input type="text" class="form-control" name="urlFoto" id="url">
+            </div>
             <button type="submit" class="btn btn-primary">Guardar</button>
         </form>
 
     </div>
-    <a href="/productos">Ver Prodcutos</a>
+    
 </body>
 
 </html>
