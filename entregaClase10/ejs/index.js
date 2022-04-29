@@ -1,4 +1,5 @@
 const express = require("express")
+const productosRoutes = require("./api/productos");
 
 const app = express()
 
