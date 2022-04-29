@@ -11,8 +11,15 @@ let  arr =[]
 app.set("view engine" ,"ejs")
 app.set("views","./views")
 
+//pagian de entrada
 //obtener productos
-app.get("/getAll",(req,res)=>{
+app.get("/",(req,res)=>{
+    res.render("portada",{titulo:"Que me vaya bien"})
+})
+
+
+//obtener productos
+app.get("/productos",(req,res)=>{
     res.render("index",{data:arr})
 })
 
@@ -21,11 +28,11 @@ app.get("/form",(req,res)=>{
 })
 
 //crear productos
-app.post("/creatPr",(req,res)=>{
+app.post("/productos",(req,res)=>{
     console.log(req.body)
     let oj = req.body
     arr.push(oj)
-    res.render("exito")
+    res.render("form")
 })
 
 
