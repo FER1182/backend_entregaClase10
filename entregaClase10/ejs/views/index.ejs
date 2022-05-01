@@ -14,6 +14,7 @@
     </header>
     <div class="container">
         <h1>PRODUCTOS</h1>
+        <%  if( data.length > 0){%>
         <table style="text-align: center;" class="table table-dark table-striped">
             <thead>
                 <tr>
@@ -27,15 +28,19 @@
 
 
                 <%  data.forEach(function(pr){%>
-                <tr >
-                    <td > <%= pr.name  %></td>
-                    <td> <%= pr.price  %></td>
-                    <td> <img src="<%= pr.urlFoto  %>" class="img-fluid" alt="..."> </td>
+                <tr>
+                    <td> <%= pr.name  %></td>
+                    <td> $ <%= pr.price  %></td>
+                    <td> <img src="<%= pr.urlFoto  %>" class="img-fluid" alt="..."
+                            style="max-width: 50px; max-height: 50px;"> </td>
                 </tr>
                 <% })%>
 
             </tbody>
         </table>
+        <% }else{ %>
+        <h2> No se encontraron productos </h2>
+        <% }%>
     </div>
 
 </body>
