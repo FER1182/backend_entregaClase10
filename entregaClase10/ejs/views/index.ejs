@@ -14,7 +14,7 @@
     </header>
     <div class="container">
         <h1>PRODUCTOS</h1>
-        <%  if( data.length > 0){%>
+        <%  if( typeof data == "object" && data.length > 0){%>
         <table style="text-align: center;" class="table table-dark table-striped">
             <thead>
                 <tr>
@@ -31,6 +31,7 @@
                 <tr>
                     <td> <%= pr.name  %></td>
                     <td> $ <%= pr.price  %></td>
+                    <%  console.log(pr.urlFoto) %>
                     <td> <img src="<%= pr.urlFoto  %>" class="img-fluid" alt="..."
                             style="max-width: 50px; max-height: 50px;"> </td>
                 </tr>
