@@ -1,0 +1,7 @@
+por lejos la mejor plantilla para mi es ejs
+me resulto muy facil todo el maquetado
+y tambien es re amigable cuando hay que mezclar 
+el html con java.
+
+hbs se puede usar pero no es la mejor
+pug es insoportable muy trabado todo el codigo
