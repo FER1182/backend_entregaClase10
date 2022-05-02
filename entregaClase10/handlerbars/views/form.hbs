@@ -1,0 +1,21 @@
+{{>home}}  <!--asi importa un partial -->
+
+<div class="container">
+         <h1 style="text-transform: lowercase;">FORMULARIO PARA AGREGAR PRODUCTOS A LA PAGINA</h1>   
+        <form action="/api/productos/form", method="post">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+            <div class="mb-3">
+                <label for="exa" class="form-label">Price</label>
+                <input type="text" class="form-control" name="price" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+                <label for="exa" class="form-label">Url photo</label>
+                <input type="text" class="form-control" name="urlFoto" id="url">
+            </div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+
+    </div>

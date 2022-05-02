@@ -1,4 +1,40 @@
-{{>home}}  <!--asi importa un partial -->
-<div>
-    <h1>{{titulo}}</h1>
+{{>home}}
+<!--asi importa un partial -->
+
+
+<div class="container">
+    <h1>PRODUCTOS</h1>
+    {{#if data}}
+    <table style="text-align: center;" class="table table-dark table-striped">
+        <thead>
+            <tr>
+
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Foto</th>
+            </tr>
+        </thead>
+        <tbody>
+
+
+
+            <tr>
+
+
+                {{#each data}}
+                <td> {{ this.name}}</td>
+                <td> {{ this.price }}</td>
+                <td> <img src="{{ this.urlFoto }}" class="img-fluid" alt="..."
+                        style="max-width: 50px; max-height: 50px;"> </td>
+                {{/each}}
+            </tr>
+
+
+        </tbody>
+    </table>
+    {{else}}
+
+
+    <h2> No se encontraron productos </h2>
+    {{/if}}
 </div>
